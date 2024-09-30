@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Html dan CSS</title>
+    <style>
+        table, th, td {
+          border:1px solid black;
+          border-collapse: collapse;
+        }
+
+        td:nth-child(1){
+          text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <table class="m-3">
+        <tr class="text-center">
+          <th>No</th>
+          <th style="width : 50%">Keterangan</th>
+          <th style="width : 50%">Bersedia Membayar</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Bersedia membayar <b style="text-transform: capitalize;">dana sumbangan pembangunan (DSP) </b>sebesar Rp. 8.500.000 dengan maksimal pembayaran Dana Sumbangan Pendidikan</td>
+          <td>
+            <input type="radio" name="opsi" id="opsi1">
+            <label for="opsi1">Lunas Saat Daftar Ulang</label>
+            <br>
+            <input type="radio" name="opsi" id="opsi2">
+            <label for="opsi2">80% dibayarkan saat daftar ulang, dan sisanya dibayarkan paling lambat 13 Juli 2024</label>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Bersedia membayar <b style="text-transform: capitalize;">sumbangan penyelenggaran pendidikan (SPP)</b> secara rutin setiap bulan sebesar Rp.550.000 yang dibayarkan sebelum bla bla bla</td>
+          <td><input type="checkbox"></td>
+        </tr>
+        <tr >
+            <td rowspan="2">3</td>
+            <td>
+                <p><b>Pembayaran Lainnya</b></p>
+                <p>Setelah puta/putri kami diterima, kami bersedia : </p><br>
+                <p>a. Wakaf pembangunan masjid Al-Ikram</p>
+            </td>
+            <td>
+                <input type="radio" name="opsi" id="opsi1">
+                <label for="opsi1">Rp. 300.000</label>
+                <br>
+                <input type="radio" name="opsi" id="opsi2">
+                <label for="opsi2">Rp. 500.000</label>
+                <br>
+                <input type="radio" name="opsi" id="opsi3">
+                <label for="opsi3">Rp. 1.000.000</label>
+                <br>
+                <input type="radio" name="opsi" id="opsi4">
+                <label for="opsi4">Rp. 2.000.000</label>
+                <br>
+                <input type="radio" name="opsi" id="opsi5">
+                <label for="opsi5"> > Rp. 5.000.000 atau Rp. <input type="text"></label>
+                <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>b. Zakat infaq dan sodaqoh rutin setiap bulan</p>
+            </td>
+            <td><input type="text" value="Rp." required></td>
+        </tr>
+      </table>
+      
+</body>
+</html>

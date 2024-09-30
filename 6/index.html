@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find name</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: spa;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f1f1f1;
+        }
+
+        #hasil {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 90vh;">
+        <label for="nama">Masukan Nama</label>
+        <input type="text" name="nama" id="nama">
+        <button id="kirim">Kirim</button>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        document.getElementById("kirim").addEventListener("click", () => {
+            let nama = document.getElementById("nama").value;
+            let hasil = document.getElementById("hasil");
+
+            if (nama === "") {
+                hasil.innerHTML = "Masukan Data Dengan Benar!";
+            } else {
+                let namaSpan = document.createElement("span");
+                namaSpan.textContent = nama;
+                namaSpan.style.color = "blue";
+
+                hasil.innerHTML = "sedang mencari... ";
+                hasil.appendChild(namaSpan);
+            }
+        });
+    </script>
+</body>
+</html>
